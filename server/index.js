@@ -1,8 +1,8 @@
 // Demo API only. Uses in-memory sample data; no bank or identity-system connections.
 const express=require('express');const cors=require('cors');const app=express();
 app.use(cors());app.use(express.json());
-let applications=[{id:'CBD-1048',business:'Li Wei Trading Ltd',stage:'Documents pending',crm:'Grace Chen'}];
-let calls=[{id:'CALL-801',customer:'Li Wei Trading Ltd',crm:'Grace Chen',status:'Attended'}];
+let applications=[{id:'CBD-1048',business:'Li Wei Trading Ltd',stage:'Documents pending',crm:'Simisola Bright'}];
+let calls=[{id:'CALL-801',customer:'Li Wei Trading Ltd',crm:'Simisola Bright',status:'Attended'}];
 app.get('/api/health',(req,res)=>res.json({ok:true,environment:'demo',integrations:[]}));
 app.get('/api/applications',(req,res)=>res.json(applications));
 app.post('/api/applications',(req,res)=>{const item={id:'CBD-'+(1049+applications.length),...req.body,stage:'Registration received',crm:'Unassigned'};applications.push(item);res.status(201).json(item)});

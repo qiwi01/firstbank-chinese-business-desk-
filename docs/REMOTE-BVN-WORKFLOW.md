@@ -2,7 +2,7 @@
 
 Source: `FirstRemote_BVN_Pitch_Deck_Complete.pdf` supplied for this prototype.
 
-## Director journey (PDF pages 5–8)
+## Director journey (nine displayed stages; PDF pages 5–8)
 1. Invitation — single-use English/Mandarin link from the Chinese Desk RM.
 2. Consent — NDPA biometric consent.
 3. Passport — e-passport NFC chip read and MRZ check.
@@ -12,7 +12,6 @@ Source: `FirstRemote_BVN_Pitch_Deck_Complete.pdf` supplied for this prototype.
 7. Approval — maker-checker review of evidence pack by Business Unit.
 8. Submission — through the approved BVN enrolment channel to NIBSS.
 9. BVN issued — validated issuance by NIBSS.
-10. Deferral cured — BVN linked and client notified by FirstBank Operations.
 
 ## 90-day control proposal (PDF pages 9–12)
 - Day 0: account opens on deferral and invitation is sent.
