@@ -15,22 +15,3 @@ body{background:var(--fb-bg)}
 /* Requested customer-facing refinements */
 @media(max-width:800px){.sidebar>a:not(.brand){font-size:12px!important;padding:10px 11px!important;gap:8px}.tabs button{font-size:14px!important;padding:11px 13px!important}.remote-stage-list button{font-size:12px!important}.side-label{display:block!important;font-size:10px;margin:8px 4px;color:#d6c38e}.branch .fee{background:transparent!important;color:#66778b!important;padding:0}.tag{background:transparent!important;color:#66778b!important}}
 .branch .fee{background:transparent!important;color:#66778b!important}.branch-head .tag{background:transparent!important;color:#66778b!important}.cerpac-steps{padding-left:22px;line-height:1.7}.cerpac-steps li{padding:8px 0}.assigned-crm{display:flex;align-items:center;gap:18px}.assigned-crm .status{margin-left:auto}.field textarea{width:100%;border:1px solid #dfe4ea;border-radius:4px;padding:11px;font:inherit;resize:vertical}.assigned-crm .crm-avatar{flex-shrink:0}
-<<<<<<< HEAD
-=======
-
-
-/* Updated uploaded logo and compact staff navigation */
-.brand{gap:0;min-width:0}
-.brand img{display:block;width:174px;height:48px;object-fit:contain;object-position:left center}
-.sidebar .brand img{width:164px;height:46px;object-fit:contain}
-.staff-nav{display:flex;flex-direction:column;gap:7px;margin-top:28px}
-.staff-nav>a,.staff-nav>.nav-toggle{display:flex;align-items:center;gap:11px;width:100%;border:0;background:transparent;color:#d6deea;padding:12px 13px;border-radius:9px;font-size:14px;font-weight:600;text-align:left}
-.staff-nav>a.active,.staff-nav>.nav-toggle.active,.staff-nav>a:hover,.staff-nav>.nav-toggle:hover{background:#ffffff16;color:#fff}
-.nav-toggle span{margin-left:auto;font-size:18px}
-.nav-submenu{display:flex;flex-direction:column;gap:4px;margin:-2px 0 5px 27px;padding-left:13px;border-left:1px solid #ffffff38}
-.nav-submenu a{color:#bdc9d8;padding:9px 10px;border-radius:7px;font-size:13px}
-.nav-submenu a.active,.nav-submenu a:hover{background:#ffffff16;color:#fff}
-.customer-row-link{display:inline-flex;flex-direction:column;gap:3px;color:inherit}
-.customer-row-link:hover{text-decoration:underline;color:#9b1730}
-.customer-needs{padding-left:22px;color:#526174;line-height:1.9}
->>>>>>> f53ebf45601ff061f7dddb8d0350e920c1f8c507
