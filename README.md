@@ -29,8 +29,8 @@ Demo API: http://localhost:4000/api/health
 - `/desk/bvn` — physical registration locations, FirstRemote BVN 10-stage guided demo, 90-day deferral timeline and simulated BVN check
 - `/desk/cerpac` — CERPAC document workflow
 - `/desk/crm` — Chinese-speaking CRM directory
-- `/admin` — GHM overview of RRM-HBS, CRM and customer feedback
-- `/admin/operations` — RRM → HBS queue
+- `/admin` — GHM overview of RRM-IBPS, CRM and customer feedback
+- `/admin/operations` — RRM-IBPS work queue
 - `/admin/cc` — customer care queue
 - `/admin/lou` — document review queue
 - `/admin/crm` — CRM management and customer allocation view
@@ -67,7 +67,7 @@ Customer experience → FirstBank API gateway/BFF → IAM and consent service �
 ## Additional prototype changes
 
 - Scroll-to-top control is available throughout the customer and staff pages.
-- The GHM landing view includes RRM-HBS, CRM and customer feedback sections; its dashboard baseline counters are zeroed.
+- The GHM landing view includes RRM-IBPS, CRM and customer feedback sections; its dashboard baseline counters are zeroed.
 - FTZ onboarding requires Lekki or Ogun selection; non-FTZ onboarding requires one of the 36 states or FCT.
 - Autosaved registrations are labelled Draft, submitted registrations Submitted, and staff can move applications to Under review or Completed. Completed items remain in the work queue.
 - China BVN location listings do not display fees.
