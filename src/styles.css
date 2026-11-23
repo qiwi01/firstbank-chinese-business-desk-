@@ -63,3 +63,39 @@ button:active{filter:brightness(.97)}
 .application-detail{border-color:#d8e1ea}
 .application-detail .field{margin-top:18px}
 @media(max-width:760px){.login-page{grid-template-columns:1fr;margin:25px auto;gap:16px}.login-card{padding:24px}.login-aside{padding:30px}.login-aside h2{font-size:28px}.scroll-top{right:14px;bottom:15px}}
+
+/* Mobile input visibility and reliable text entry */
+input, textarea, select, [contenteditable="true"] {
+  color: #263448 !important;
+  -webkit-text-fill-color: #263448 !important;
+  caret-color: #b5102c !important;
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  pointer-events: auto;
+  opacity: 1;
+}
+input::placeholder, textarea::placeholder {
+  color: #8793a2 !important;
+  -webkit-text-fill-color: #8793a2 !important;
+  opacity: 1;
+}
+.field input, .field textarea, .field select, .searchbox input, .branch-filters input {
+  background-color: #fff !important;
+  color: #263448 !important;
+  -webkit-text-fill-color: #263448 !important;
+  caret-color: #b5102c !important;
+  font-size: 12px;
+}
+@media (max-width: 760px) {
+  .field input, .field textarea, .field select, .searchbox input, .branch-filters input { font-size: 16px; }
+}
+/* Prevent Android/iOS blue tap flashes on every interactive control. */
+*, *::before, *::after { -webkit-tap-highlight-color: transparent; }
+button, a, input, textarea, select {
+  -webkit-tap-highlight-color: transparent !important;
+}
+button:active, button:focus, button:focus-visible,
+a:active, a:focus, a:focus-visible {
+  -webkit-tap-highlight-color: transparent !important;
+}
+button:active { filter: none !important; }
