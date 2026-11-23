@@ -23,20 +23,20 @@ Demo API: http://localhost:4000/api/health
 
 ## Main routes
 
-- `/` — simulated banking dashboard; only Chinese Business Desk is enabled
+- `/` — FirstBank-style login / create-account landing page, with direct Chinese Business Desk access
 - `/desk` — service landing page and FAQ
-- `/desk/account` — four-step onboarding with local draft auto-save and demo CRM assignment
+- `/desk/account` — four-step onboarding with local draft auto-save, FTZ/state selection and demo CRM assignment
 - `/desk/bvn` — physical registration locations, FirstRemote BVN 10-stage guided demo, 90-day deferral timeline and simulated BVN check
 - `/desk/cerpac` — CERPAC document workflow
 - `/desk/crm` — Chinese-speaking CRM directory
-- `/admin` — internal portal overview
+- `/admin` — GHM overview of RRM-HBS, CRM and customer feedback
 - `/admin/operations` — RRM → HBS queue
 - `/admin/cc` — customer care queue
 - `/admin/lou` — document review queue
 - `/admin/crm` — CRM management and customer allocation view
 - `/admin/tablets` — tablet assignment tracking
 - `/admin/customers` — customer directory
-- `/admin/calls` — call scheduling, attended/missed status and reports
+- `/admin/calls` — physical meeting scheduling, attended/missed status and reports
 
 ## FirstRemote BVN reference
 
@@ -57,9 +57,20 @@ The UI has been restyled in FirstBank's deep-blue/gold direction and uses a rest
 - Never enter real BVNs, identity data, passwords, bank account details or immigration documents. The BVN verification button only returns a local simulated response.
 - Passport NFC, liveness, face match, fingerprint capture, compliance screening, NIBSS submission and BVN issuance are simulated checkpoints. They do not collect biometric data or communicate with real providers.
 - File inputs are UI placeholders; files are not uploaded to a secure document-management service.
-- The Express API uses in-memory demo data. It is not production persistence or a secure bank integration.
+- The Express API uses in-memory demo data. Browser registration autosaves are stored in localStorage for this same-browser prototype, so staff and customer sessions on separate devices do not share records. It is not production persistence or a secure bank integration.
 - Production requires FirstBank-approved API gateway/BFF, identity and access management, role-based permissions, encrypted document storage, consent records, audit logging, data retention and NDPA/cross-border transfer review, vendor due diligence, NIBSS/CBN approvals, maker-checker controls, and Compliance/Legal sign-off on the proposed 90-day deferral and transaction limits.
 
 ## Suggested production architecture
 
 Customer experience → FirstBank API gateway/BFF → IAM and consent service → onboarding/CRM/document management adapters → approved identity/biometric and screening providers → authorised NIBSS BVN enrolment channel. Publish state changes through auditable events; do not expose core banking or NIBSS credentials to the browser.
+
+## Additional prototype changes
+
+- Scroll-to-top control is available throughout the customer and staff pages.
+- The GHM landing view includes RRM-HBS, CRM and customer feedback sections; its dashboard baseline counters are zeroed.
+- FTZ onboarding requires Lekki or Ogun selection; non-FTZ onboarding requires one of the 36 states or FCT.
+- Autosaved registrations are labelled Draft, submitted registrations Submitted, and staff can move applications to Under review or Completed. Completed items remain in the work queue.
+- China BVN location listings do not display fees.
+- The CERPAC link points to the official Nigeria Immigration e-CERPAC requirements page: https://cerpac.immigration.gov.ng/requirements .
+- Physical Meetings & Reports records scheduled, attended and missed in-person meetings, not phone calls.
+- The login/create-account screen and authentication are visual prototype elements only; the Chinese Business Desk link remains available without login.

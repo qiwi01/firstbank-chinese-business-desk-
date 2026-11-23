@@ -15,3 +15,51 @@ body{background:var(--fb-bg)}
 /* Requested customer-facing refinements */
 @media(max-width:800px){.sidebar>a:not(.brand){font-size:12px!important;padding:10px 11px!important;gap:8px}.tabs button{font-size:14px!important;padding:11px 13px!important}.remote-stage-list button{font-size:12px!important}.side-label{display:block!important;font-size:10px;margin:8px 4px;color:#d6c38e}.branch .fee{background:transparent!important;color:#66778b!important;padding:0}.tag{background:transparent!important;color:#66778b!important}}
 .branch .fee{background:transparent!important;color:#66778b!important}.branch-head .tag{background:transparent!important;color:#66778b!important}.cerpac-steps{padding-left:22px;line-height:1.7}.cerpac-steps li{padding:8px 0}.assigned-crm{display:flex;align-items:center;gap:18px}.assigned-crm .status{margin-left:auto}.field textarea{width:100%;border:1px solid #dfe4ea;border-radius:4px;padding:11px;font:inherit;resize:vertical}.assigned-crm .crm-avatar{flex-shrink:0}
+
+
+/* Updated uploaded logo and compact staff navigation */
+.brand{gap:0;min-width:0}
+.brand img{display:block;width:174px;height:48px;object-fit:contain;object-position:left center}
+.sidebar .brand img{width:164px;height:46px;object-fit:contain}
+.staff-nav{display:flex;flex-direction:column;gap:7px;margin-top:28px}
+.staff-nav>a,.staff-nav>.nav-toggle{display:flex;align-items:center;gap:11px;width:100%;border:0;background:transparent;color:#d6deea;padding:12px 13px;border-radius:9px;font-size:14px;font-weight:600;text-align:left}
+.staff-nav>a.active,.staff-nav>.nav-toggle.active,.staff-nav>a:hover,.staff-nav>.nav-toggle:hover{background:#ffffff16;color:#fff}
+.nav-toggle span{margin-left:auto;font-size:18px}
+.nav-submenu{display:flex;flex-direction:column;gap:4px;margin:-2px 0 5px 27px;padding-left:13px;border-left:1px solid #ffffff38}
+.nav-submenu a{color:#bdc9d8;padding:9px 10px;border-radius:7px;font-size:13px}
+.nav-submenu a.active,.nav-submenu a:hover{background:#ffffff16;color:#fff}
+.customer-row-link{display:inline-flex;flex-direction:column;gap:3px;color:inherit}
+.customer-row-link:hover{text-decoration:underline;color:#9b1730}
+.customer-needs{padding-left:22px;color:#526174;line-height:1.9}
+
+
+/* Interaction and accessibility refinements */
+button,a.btn{ -webkit-tap-highlight-color: transparent; }
+button:focus,button:active,button:focus-visible,
+a.btn:focus,a.btn:active,a.btn:focus-visible{
+  outline:none;
+  box-shadow:none;
+}
+button:focus-visible,a:focus-visible{outline:2px solid #d6a72c;outline-offset:2px}
+button:active{filter:brightness(.97)}
+.scroll-top{position:fixed;right:20px;bottom:22px;z-index:1000;width:46px;height:46px;border:0;border-radius:50%;background:#0b2a4a;color:#fff;font-size:25px;font-weight:700;place-items:center;box-shadow:0 5px 18px #0b2a4a35;cursor:pointer}
+.login-page{max-width:1180px;margin:55px auto;padding:0 24px;display:grid;grid-template-columns:minmax(300px,470px) 1fr;gap:28px;align-items:stretch;min-height:560px}
+.login-card{background:#fff;border:1px solid var(--fb-line);border-radius:14px;padding:36px;box-shadow:0 12px 36px #0b2a4a0b}
+.login-brand h1{font-size:29px;line-height:1.2;margin:10px 0}
+.login-brand p,.login-note{font-size:12px;line-height:1.7;color:var(--fb-muted)}
+.login-card form{margin-top:28px}
+.login-submit,.desk-entry{width:100%;margin-top:8px}
+.auth-switch{margin-top:18px;background:none;border:0;color:#0b2a4a;font-size:12px;font-weight:700;cursor:pointer}
+.login-divider{display:flex;align-items:center;gap:12px;color:#98a4b2;font-size:10px;margin:22px 0}
+.login-divider:before,.login-divider:after{content:'';height:1px;background:var(--fb-line);flex:1}
+.desk-entry{justify-content:center;text-decoration:none}
+.login-aside{border-radius:14px;padding:48px;background:linear-gradient(135deg,#0b2a4a,#164d78);color:#fff;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.login-aside h2{font-size:34px;line-height:1.18;max-width:440px;margin:15px 0}
+.login-aside p{font-size:13px;line-height:1.8;color:#dbe5ef;max-width:440px;margin:0 0 26px}
+.wechat-id{display:block;color:#69798c;font-size:11px;margin-top:7px}
+.detail-field{padding:12px;border:1px solid var(--fb-line);border-radius:8px;background:#fbfcfd;display:flex;flex-direction:column;gap:7px;min-width:0}
+.detail-field small{color:#718093;font-size:10px}
+.detail-field b{font-size:12px;overflow-wrap:anywhere}
+.application-detail{border-color:#d8e1ea}
+.application-detail .field{margin-top:18px}
+@media(max-width:760px){.login-page{grid-template-columns:1fr;margin:25px auto;gap:16px}.login-card{padding:24px}.login-aside{padding:30px}.login-aside h2{font-size:28px}.scroll-top{right:14px;bottom:15px}}
